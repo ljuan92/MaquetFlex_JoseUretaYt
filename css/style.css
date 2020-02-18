@@ -1,1 +1,145 @@
-/* Estilos */
+/* VARIABLES */
+
+:root {
+  --color-header: #011826;
+  --color-nav: #049DBF;
+  --color-nav-dark:#02687F;
+  --color-section:#03658C;
+  --color-aside:#F1F2EB;
+  --color-footer:#023859;
+  --color-white:#fff;
+  --color-black:#000;
+}
+
+/* SELECTOR UNIVERSAL */
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* BODY */
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Roboto;
+}
+
+/* HEADER */
+
+.main-header {
+  background-color: var(--color-header);
+  color: var(--color-white);
+  line-height: 5;
+  text-align: center;
+}
+
+
+
+/* NAV */
+
+.main-nav {
+  background-color: var(--color-nav);
+}
+
+.nav-container__item {
+  text-align: center;
+  line-height: 2.5;
+  border-bottom: 1px solid var(--color-white);
+
+}
+
+/* VISTA PARA TABLET */
+
+@media screen and (min-width:768px) {
+  .nav-container {
+      display: flex;
+  }
+
+  .nav-container__item {
+    flex-grow: 1;
+  }
+
+
+}
+
+.nav-container__item:hover {
+  background-color: var(--color-nav-dark);
+
+}
+
+.nav-container__link {
+  color: var(--color-white);
+  display: block;
+  width: 100%;
+}
+
+
+
+/* CONTAINER */
+
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* VISTA PARA PC */
+
+@media screen and (min-width:1024px) {
+  .main-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .main-container__section {
+    flex-basis: 60%;
+  }
+
+  .main-container__aside {
+    flex-basis: 40%;
+  }
+
+}
+
+
+
+/* SECTION */
+
+.main-container__section {
+  background-color: var(--color-section);
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-white);
+}
+
+
+
+/* ASIDE */
+
+.main-container__aside {
+  background-color: var(--color-aside);
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/* FOOTER */
+
+.main-footer {
+  background-color: var(--color-footer);
+  color: var(--color-white);
+  line-height: 5;
+  text-align: center;
+  margin-top: auto;
+}
